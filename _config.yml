@@ -11,7 +11,7 @@ owner: Arnaud Décolasse # or company name
 first_published: 2019 # if migrating another site, the year of your first publish
 email: arnaud.decolasse@gmail.com
 baseurl: "" # the subpath of your site, e.g. /mariage
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://www.mariage-celia-arnaud.fr" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 #sass:
