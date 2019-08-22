@@ -8,11 +8,9 @@
         <div id="menu">
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            {% for my_page in site.pages %}
-            {% if my_page.title %}
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
+            <li><a href="{{ '/ceremonie.html' | prepend: site.baseurl }}">Cérémonie</a></li>
+            <li><a href="{{ '/reception.html' | prepend: site.baseurl }}">Réception</a></li>
+            <li><a href="{{ '/logement.html' | prepend: site.baseurl }}">Logement</a></li>
           </ul>
         </div>
       </li>

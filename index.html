@@ -17,11 +17,9 @@ layout: landing
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Le Grand jour arrive</h2>
-								<p>Célia Delerce et Arnaud Décolasse ont le plaisir de vous inviter à leur mariage le samedi 12 septembre 2020.</p>
-								<p>Après la cérémonie officielle à la mairie de Thonon-les-Bains, non loin du lac Léman,</br>
-									la fête se poursuivra au pied des montagnes, dans le domaine de la Ferme du Château.</p>
-								<p>Réponse attendue au plus tard le 31 mars 2020.</p>
+								<h2>{{ site.update_title }}</h2>
+								<p><sub>{{ site.update_date}}</sub></p>
+								<p>{{ site.update_description | markdownify }}</p>
 							</header>
 							<ul class="icons major">
 								<li><span class="icon fa-diamond major style1"><span class="label">Diamant</span></span></li>
@@ -34,30 +32,36 @@ layout: landing
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/france.jpg" alt="" /></div><div class="content">
-							<h2>Thonon-les-Bains, Haute-Savoie</h2>
-							<p>Thonon-les-Bains est une commune française de 35 000 habitants située dans le département de la Haute-Savoie (dont elle est une sous-préfecture), en région Auvergne-Rhône-Alpes.<br/>
-							<p>Ce que Wikipédia ne dit pas en revanche, c'est que la belle ville de Thonon a vu grandir la petite Célia Delerce, au sein du foyer familial situé Allée des Bosnis.</p>
-							<p>Comme la région plait également beaucoup au petit parisien Arnaud Décolasse, c'est ici que nous avons choisi de nous marier.</p>
+							<div class="image"><img src="images/france.jpg" alt="" /></div>
+							<div class="content">
+								<h2>Thonon-les-Bains, Haute-Savoie</h2>
+								<p>Thonon-les-Bains est une commune française de 35 000 habitants située dans le département de la Haute-Savoie en région Auvergne-Rhône-Alpes.<br/>
+								<p>C'est aussi la ville d'origine de Célia et de sa famille, et comme Arnaud aimé également beaucoup la région, c'est ici que nous avons choisi de nous marier.</p>
+								<p>Pour venir: train, voiture, avion (aéroport de Genève)</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/mairie.jpg" alt="" /></div><div class="content">
-								<h2>La Mairie</h2>
-								<p>Nous vous donnons rendez-vous à 14h devant la mairie de Thonon pour la cérémonie officielle.</p>
-								<p>Adresse : 1 Place de l'Hôtel de ville, 74200 Thonon-les-Bains</p>
+							<div class="image"><img src="images/mairie.jpg" alt="" /></div>
+							<div class="content">
+								<h2>La cérémonie</h2>
+								<p>La cérémonie officielle aura lieu à la mairie de Thonon, horaire à venir.</p>
+								<p><a href="ceremonie.html">Plus de détail</a></p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/ferme.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/ferme.jpg" alt="" /></div>
+							<div class="content">
 								<h2>La réception</h2>
 								<p>Après la cérémonie officielle, la fête se poursuivra au domaine de la Ferme du Château.</p>
-								<ul>
-									<li>16h - Cérémonie laïque</li>
-									<li>17h - Vin d'honneur</li>
-									<li>19h - Dîner</li>
-								</ul>
-							<p>Adresse : 186 route d’Orcier, Hameau de Maugny, 74550 Draillant</p>
+							<p><a href="reception.html">Plus de détail</a></p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<div class="image"><img src="images/hotels.jpg" alt="" /></div>
+							<div class="content">
+								<h2>Le logement</h2>
+								<p>A venir</p>
+								<p><a href="logement.html">Plus de détail</a></p>
 							</div>
 						</section>
 					</section>
@@ -66,34 +70,24 @@ layout: landing
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Infos en vrac</h2>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-child">
+									<h3>Les enfants</h3>
+									<p>Une salle spéciale pour le repas des enfants est prévue au domaine.</p>
 								</li>
-								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-photo">
+									<h3>Séance photo</h3>
+									<p>A venir.</p>
 								</li>
-								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-sun-o">
+									<h3>Le lendemain</h3>
+									<p>si le temps le permet, nous nous retrouverons au bord du lac Léman pour un brunch.</p>
 								</li>
-								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-glass">
+									<h3>Le thème</h3>
+									<p>Ambiance montagne et campagne.</p>
 								</li>
 							</ul>
 						</div>
