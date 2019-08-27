@@ -1241,6 +1241,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		&.alt {
 			padding: 0;
 		}
+		
+		&.alt2 {
+			padding-top: 2em;
+		}
 
 		&.style1 {
 			@include wrapper(accent1);
