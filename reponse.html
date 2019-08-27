@@ -1,0 +1,45 @@
+---
+layout: page_noheader
+title: Réponse mariage
+---
+<h3>Ma réponse</h3>
+<form method="post" action="https://formspree.io/{{site.email}}">
+	<div class="row uniform">
+		<div class="6u 12u$(small)">
+			<input type="text" name="nom" id="nom" value="" placeholder="Nom" required/>
+		</div>
+		<div class="6u$ 12u$(small)">
+			<input type="email" name="email" id="email" value="" placeholder="Email" />
+		</div>
+		<div class="8u 12u$(small)">
+			<div class="select-wrapper">
+				<select name="reponse" id="reponse" required>
+					<option value="">- Réponse -</option>
+					<option value="Présent">Présent</option>
+					<option value="Pas sûr">Pas sûr</option>
+					<option value="Absent">Absent</option>
+				</select>
+			</div>
+		</div>
+		<div class="4u$ 12u$(xsmall)">
+			<input type="checkbox" id="vindhonneur" name="vindhonneur">
+			<label for="vindhonneur">Vin d'honneur seulement</label>
+		</div>
+		<div class="6u 12u$(xsmall)">
+			<label for="nb_adulte">Nombre d'adultes</label>
+			<input type="number" name="nb_adulte" id="nb_adulte" value="0" />
+		</div>
+		<div class="6u$ 12u$(xsmall)">
+			<label for="nb_enfant">Nombre d'enfants (-13 ans)</label>
+			<input type="number" name="nb_enfant" id="nb_enfant" value="0" />
+		</div>
+		<div class="12u$">
+			<textarea name="message" id="message" placeholder="Votre petit mot..." rows="6"></textarea>
+		</div>
+		<div class="12u$">
+			<ul class="actions">
+				<li><input type="submit" value="Envoyer" class="special" /></li>
+			</ul>
+		</div>
+	</div>
+</form>

@@ -287,6 +287,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="number"],
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
@@ -336,6 +337,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="number"],
 	select {
 		height: _size(element-height);
 	}
@@ -1085,6 +1087,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			input[type="text"],
 			input[type="password"],
 			input[type="email"],
+			input[type="number"],
 			select,
 			textarea {
 				background: _palette($p, border-bg);
