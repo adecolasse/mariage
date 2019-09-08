@@ -8,7 +8,7 @@ description: |
   Thonon-les-Bains  
   Haute-Savoie
 update_title: Le grand jour arrive
-update_date: "Dernière mise à jour : 22/08/2019"
+update_date: "Dernière mise à jour : 08/09/2019"
 update_description: |
   Ca y est, nous entrons dans le vif du sujet et lançons l'organisation de notre mariage le 12 septembre 2020 !
     
@@ -16,7 +16,7 @@ update_description: |
   
   A bientôt  
   Célia et Arnaud
-owner: Arnaud Décolasse
+owner: Célia & Arnaud
 first_published: 2019 # if migrating another site, the year of your first publish
 email: arnaud.decolasse@gmail.com
 baseurl: "" # the subpath of your site, e.g. /mariage
