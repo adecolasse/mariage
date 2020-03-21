@@ -8,7 +8,7 @@ description: |
   Thonon-les-Bains  
   Haute-Savoie
 owner: Célia & Arnaud
-first_published: 2019 # if migrating another site, the year of your first publish
+first_published: 2020 # if migrating another site, the year of your first publish
 email: arnaud.decolasse@gmail.com
 baseurl: "" # the subpath of your site, e.g. /mariage
 url: "https://www.mariage-celia-arnaud.fr" # the base hostname & protocol for your site
