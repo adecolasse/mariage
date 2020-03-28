@@ -36,8 +36,8 @@ var photo = {
 }
 
 var App = {
-  yesButton: $('.button.yes .trigger'),
-  noButton: $('.button.no .trigger'),
+  yesButton: $('.tinderbut.yes .trigger'),
+  noButton: $('.tinderbut.no .trigger'),
   blocked: false,
   like: function(liked){
     var animate = liked ? 'animateYes' : 'animateNo';
