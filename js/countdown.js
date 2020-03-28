@@ -4,7 +4,12 @@
 
 // Update the count down every 1 second
   var x = setInterval(function () {
+    var countown = document.getElementById("countdown");
 
+    if(countown == null){
+      return;
+    }
+    
     // Get today's date and time
     var now = new Date().getTime();
 
@@ -24,7 +29,7 @@
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
+      document.getElementById("countdown").innerHTML = "ON Y EST !";
     }
   }, 1000);
 })(jQuery);
