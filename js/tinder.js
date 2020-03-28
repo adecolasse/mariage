@@ -1,74 +1,74 @@
 var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
-var photo = {
-  wrap: $('#galerie'),
-  galerie: [
+const galerie = {
+  photos: [
     {
-      name: 'Image 1',
-      year: 2019,
-      img: "tinder/image1.jpg"
+      name: 'Example',
+      year: "12/09/2020",
+      img: "tinder/image1.jpg",
+      code: "skip"
     },
     {
-      name: 'Image 2',
+      name: 'Photo #1',
       year: 2019,
-      img: "tinder/image1.jpg"
+      img: "tinder/image1.jpg",
+      code: "cmVhbA==" // real
     },
     {
-      name: 'Image 3',
+      name: 'Photo #2',
       year: 2019,
-      img: "tinder/image1.jpg"
+      img: "tinder/image1.jpg",
+      code: "ZmFrZQ==" // fake
     },
-    {
-      name: 'Image 4',
-      year: 2019,
-      img: "tinder/image1.jpg"
-    },
-    {
-      name: 'Image 5',
-      year: 2019,
-      img: "tinder/image1.jpg"
-    }
   ],
-  add: function(){
-    var random =     this.galerie[Math.floor(Math.random() * this.galerie.length)];
-    this.wrap.append("<div class='photo'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.year + "</span></div>");
-  }
-}
+  total: 0
+};
 
 var App = {
   yesButton: $('.tinderbut.yes .trigger'),
   noButton: $('.tinderbut.no .trigger'),
   blocked: false,
-  like: function(liked){
-    var animate = liked ? 'animateYes' : 'animateNo';
+
+  evaluate: function (real) {
+    var animate = real ? 'animateYes' : 'animateNo';
     var self = this;
-    photo.add();
     if (!this.blocked) {
       this.blocked = true;
-      $('.photo').eq(0).addClass(animate).one(animationEndEvent, function() {
-        $(this).remove();
-        self.blocked = false;
-      });
+      var current = $('.photo').eq(0);
+      var id = current.attr("id");
+      if (id !== 'result') {
+        current.eq(0).addClass(animate).one(animationEndEvent, function () {
+          $(this).remove();
+          self.blocked = false;
+        });
+
+        var code = galerie.photos[parseInt(id.slice(5))].code;
+        if (code !== "skip" && (real && atob(code) === "real" || !real && atob(code) === "fake")) {
+          galerie.total++;
+        }
+        this.score();
+      }
     }
+  },
+
+  score: function () {
+    $('#result').html("<span><strong>Ton score:</strong> " + galerie.total + "</span>")
+
   }
 };
 
-App.yesButton.on('mousedown', function() {
-  App.like(true);
+App.yesButton.on('mousedown', function () {
+  App.evaluate(true);
 });
 
-App.noButton.on('mousedown', function() {
-  App.like(false);
+App.noButton.on('mousedown', function () {
+  App.evaluate(false);
 });
 
-$(document).ready(function() {
-  photo.galerie.forEach(function(photo){
+$(document).ready(function () {
+  galerie.photos.forEach(function (photo, index) {
     new Image().src = photo.img;
+    $('#galerie').append("<div id='index" + index + " ' class='photo'><img alt='" + photo.name + "' src='" + photo.img + "' /><span><strong>" + photo.name + "</strong>, " + photo.year + "</span></div>");
   });
-
-  photo.add();
-  photo.add();
-  photo.add();
-  photo.add();
-  
+  $('#galerie').append("<div id='result' class='photo'></div>");
 });

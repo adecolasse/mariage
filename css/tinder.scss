@@ -104,10 +104,10 @@ $distance: 400px;
 
 .animateYes {
   animation-fill-mode: both;
-  animation: yes 0.6s linear;
+  animation: yes 1s linear;
 &:before {
     transform: rotateZ(-35deg);
-    background: url("#{$baseurl}/real.png") no-repeat center 50px;
+    background: url("#{$baseurl}/real.png") no-repeat 65% 5%;
   }
 }
 
@@ -128,10 +128,10 @@ $distance: 400px;
 
 .animateNo {
   animation-fill-mode: both;
-  animation: no 0.6s linear;
+  animation: no 1s linear;
 &:before {
     transform: rotateZ(35deg);
-    background: url("#{$baseurl}/fake.png") no-repeat center 50px;
+    background: url("#{$baseurl}/fake.png") no-repeat 35% 5%;
   }
 }
 
@@ -196,14 +196,3 @@ $distance: 400px;
       color: #3b7;
     }
   }
-
-#copy {
-  font: 12px "Open Sans";
-  color: #ccc;
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  a {
-    color: #aaa;
-  }
-}
