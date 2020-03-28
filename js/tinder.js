@@ -1,8 +1,3 @@
-$('a[href*=#]').click(function(){
-  return false;
-});
-
-
 var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 var photo = {
