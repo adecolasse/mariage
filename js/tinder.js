@@ -5,19 +5,19 @@ const galerie = {
     {
       name: 'Example',
       year: "12/09/2020",
-      img: "tinder/image1.jpg",
+      img: "image1.jpg",
       code: "skip"
     },
     {
       name: 'Photo #1',
       year: 2019,
-      img: "tinder/image1.jpg",
+      img: "image1.jpg",
       code: "cmVhbA==" // real
     },
     {
       name: 'Photo #2',
       year: 2019,
-      img: "tinder/image1.jpg",
+      img: "image1.jpg",
       code: "ZmFrZQ==" // fake
     },
   ],
