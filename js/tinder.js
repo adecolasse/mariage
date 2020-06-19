@@ -3,21 +3,21 @@ var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanim
 const galerie = {
   photos: [
     {
-      name: 'Example',
+      name: 'Tinder Game',
       year: "12/09/2020",
-      img: "image1.jpg",
+      img: "/tinder/intro_game.jpg",
       code: "skip"
     },
     {
       name: 'Photo #1',
       year: 2019,
-      img: "image1.jpg",
+      img: "/tinder/real_example.jpg",
       code: "cmVhbA==" // real
     },
     {
       name: 'Photo #2',
       year: 2019,
-      img: "image1.jpg",
+      img: "/tinder/fake_example.jpg",
       code: "ZmFrZQ==" // fake
     },
   ],
@@ -68,7 +68,7 @@ App.noButton.on('mousedown', function () {
 $(document).ready(function () {
   galerie.photos.forEach(function (photo, index) {
     new Image().src = photo.img;
-    $('#galerie').append("<div id='index" + index + " ' class='photo'><img alt='" + photo.name + "' src='tinder/" + photo.img + "' /><span><strong>" + photo.name + "</strong>, " + photo.year + "</span></div>");
+    $('#galerie').append("<div id='index" + index + " ' class='photo'><img alt='" + photo.name + "' src='" + photo.img + "' /><span><strong>" + photo.name + "</strong>, " + photo.year + "</span></div>");
   });
   $('#galerie').append("<div id='result' class='photo'></div>");
 });
