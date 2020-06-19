@@ -68,7 +68,7 @@ App.noButton.on('mousedown', function () {
 $(document).ready(function () {
   galerie.photos.forEach(function (photo, index) {
     new Image().src = photo.img;
-    $('#galerie').append("<div id='index" + index + " ' class='photo'><img alt='" + photo.name + "' src='" + photo.img + "' /><span><strong>" + photo.name + "</strong>, " + photo.year + "</span></div>");
+    $('#galerie').append("<div id='index" + index + " ' class='photo'><img alt='" + photo.name + "' src='tinder/" + photo.img + "' /><span><strong>" + photo.name + "</strong>, " + photo.year + "</span></div>");
   });
   $('#galerie').append("<div id='result' class='photo'></div>");
 });
