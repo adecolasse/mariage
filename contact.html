@@ -1,0 +1,25 @@
+---
+layout: page_noheader
+title: Nous contacter
+---
+<h3>Nous contacter</h3>
+<form method="post" action="https://formspree.io/{{site.email}}">
+        <input type="hidden" name="_language" value="fr" />
+	<input type="hidden" name="_cc" value="c.delerce@hotmail.fr" />
+        <div class="row uniform">
+		<div class="6u 12u$(small)">
+			<input type="text" name="nom" id="nom" value="" placeholder="Nom" required/>
+		</div>
+		<div class="6u$ 12u$(small)">
+			<input type="email" name="email" id="email" value="" placeholder="Email" />
+		</div>
+		<div class="12u$">
+			<textarea name="message" id="message" placeholder="Votre message..." rows="6"></textarea>
+		</div>
+		<div class="12u$">
+			<ul class="actions">
+				<li><input type="submit" value="Envoyer" class="special" /></li>
+			</ul>
+		</div>
+	</div>
+</form>
